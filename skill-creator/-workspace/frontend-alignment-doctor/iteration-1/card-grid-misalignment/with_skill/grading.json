@@ -1,0 +1,8 @@
+{
+  "expectations": [
+    {"text": "identifies_width_margin_math_error", "passed": true, "evidence": "width: 33% combined with margin: 10px breaks the math. Three cards at 33% = 99%, but adding 20px of horizontal margin per card pushes the total well over 100%"},
+    {"text": "recommends_css_grid_or_gap", "passed": true, "evidence": "display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-md);"},
+    {"text": "provides_responsive_solution", "passed": true, "evidence": "Automatically fits as many 280px+ columns as possible, No media queries needed for basic responsiveness, Desktop (>1280px), Tablet (768-1279px), Mobile (<768px)"},
+    {"text": "explains_unequal_heights", "passed": true, "evidence": "Without explicit row height settings, cards stretch to fill their row but rows can be different heights, grid-auto-rows: 1fr: Forces all rows to be equal height"}
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "eval_id": 3,
+  "eval_name": "centering-nightmare",
+  "prompt": "I've been trying to center a div both horizontally and vertically for 30 minutes and nothing works. The parent is full viewport height. Here's what I have:\n\n.parent {\n  height: 100vh;\n  width: 100%;\n}\n\n.child {\n  margin: auto;\n  width: 300px;\n  height: 200px;\n}\n\nWhy isn't this centering? I need it to work on all screen sizes.",
+  "assertions": [
+    {
+      "name": "explains_margin_auto_limitation",
+      "description": "Explains that margin: auto only centers horizontally, not vertically",
+      "type": "contains_any",
+      "expected": ["horizontally", "vertical", "only centers", "doesn't center vertically", "margin: auto only"]
+    },
+    {
+      "name": "provides_flexbox_or_grid_solution",
+      "description": "Provides flexbox or grid solution for centering",
+      "type": "contains_any",
+      "expected": ["display: flex", "justify-content: center", "align-items: center", "place-items: center", "display: grid"]
+    },
+    {
+      "name": "includes_responsive_consideration",
+      "description": "Includes responsive considerations for all screen sizes",
+      "type": "contains_any",
+      "expected": ["max-width", "responsive", "100%", "calc(100%", "all screen", "viewport"]
+    },
+    {
+      "name": "provides_complete_code",
+      "description": "Provides complete working CSS code",
+      "type": "contains_any",
+      "expected": [".parent {", ".child {", "display: flex"]
+    }
+  ]
+}

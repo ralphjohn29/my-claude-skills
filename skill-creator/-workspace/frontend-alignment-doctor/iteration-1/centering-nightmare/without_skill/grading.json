@@ -1,0 +1,8 @@
+{
+  "expectations": [
+    {"text": "explains_margin_auto_limitation", "passed": true, "evidence": "margin: auto only centers horizontally for block-level elements. It does NOT center vertically"},
+    {"text": "provides_flexbox_or_grid_solution", "passed": true, "evidence": "display: flex; justify-content: center; align-items: center; and display: grid; place-items: center;"},
+    {"text": "includes_responsive_consideration", "passed": true, "evidence": "@media (max-width: 400px) { .child { width: 90%; max-width: 300px; } }"},
+    {"text": "provides_complete_code", "passed": true, "evidence": "Complete HTML example with CSS provided"}
+  ]
+}

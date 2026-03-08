@@ -1,0 +1,86 @@
+{
+  "skill_name": "frontend-alignment-doctor",
+  "iteration": 1,
+  "configurations": [
+    {
+      "name": "with_skill",
+      "description": "Frontend Alignment Doctor skill loaded",
+      "results": {
+        "card-grid-misalignment": {
+          "pass_rate": 1.0,
+          "passed": 4,
+          "total": 4,
+          "duration_ms": 162281,
+          "total_tokens": 21403
+        },
+        "navbar-spacing-issues": {
+          "pass_rate": 1.0,
+          "passed": 4,
+          "total": 4,
+          "duration_ms": 151492,
+          "total_tokens": 21071
+        },
+        "centering-nightmare": {
+          "pass_rate": 1.0,
+          "passed": 4,
+          "total": 4,
+          "duration_ms": 152292,
+          "total_tokens": 23593
+        },
+        "aggregate": {
+          "pass_rate": 1.0,
+          "passed": 12,
+          "total": 12,
+          "mean_duration_ms": 155355,
+          "mean_tokens": 22022
+        }
+      }
+    },
+    {
+      "name": "without_skill",
+      "description": "No skill (baseline)",
+      "results": {
+        "card-grid-misalignment": {
+          "pass_rate": 1.0,
+          "passed": 4,
+          "total": 4,
+          "duration_ms": 137747,
+          "total_tokens": 16980
+        },
+        "navbar-spacing-issues": {
+          "pass_rate": 1.0,
+          "passed": 4,
+          "total": 4,
+          "duration_ms": 142616,
+          "total_tokens": 17151
+        },
+        "centering-nightmare": {
+          "pass_rate": 1.0,
+          "passed": 4,
+          "total": 4,
+          "duration_ms": 122036,
+          "total_tokens": 16347
+        },
+        "aggregate": {
+          "pass_rate": 1.0,
+          "passed": 12,
+          "total": 12,
+          "mean_duration_ms": 134133,
+          "mean_tokens": 16826
+        }
+      }
+    }
+  ],
+  "delta": {
+    "pass_rate": 0.0,
+    "duration_ms": 21222,
+    "tokens": 5196
+  },
+  "analyst_notes": [
+    "Both configurations achieved 100% pass rate on all assertions.",
+    "The skill version uses more tokens (avg +5196) and takes slightly longer (avg +21s), indicating more comprehensive analysis.",
+    "The skill version provides more structured output with consistent formatting (Problem Summary, CSS Investigation, Fix Recommendation, Responsive Considerations).",
+    "Both versions correctly identify root causes and provide proper CSS solutions.",
+    "The skill's structured format may be more valuable for complex debugging scenarios despite the token cost."
+  ]
+}

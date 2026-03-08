@@ -1,0 +1,8 @@
+{
+  "expectations": [
+    {"text": "explains_margin_auto_limitation", "passed": true, "evidence": "The margin: auto trick only works for HORIZONTAL centering in normal flow. margin: auto on top/bottom does NOT center vertically. The browser interprets auto top/bottom margins as 0"},
+    {"text": "provides_flexbox_or_grid_solution", "passed": true, "evidence": "display: flex; justify-content: center; align-items: center; and display: grid; place-items: center;"},
+    {"text": "includes_responsive_consideration", "passed": true, "evidence": "CRITICAL: Fixed 300px width may be too wide for very small screens, max-width: calc(100% - 32px), width: min(300px, 100%)"},
+    {"text": "provides_complete_code", "passed": true, "evidence": "Complete CSS with .parent and .child blocks provided"}
+  ]
+}

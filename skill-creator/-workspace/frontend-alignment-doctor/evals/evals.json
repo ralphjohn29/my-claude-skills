@@ -1,0 +1,26 @@
+{
+  "skill_name": "frontend-alignment-doctor",
+  "evals": [
+    {
+      "id": 1,
+      "name": "card-grid-misalignment",
+      "prompt": "The cards in my product grid are not aligning properly - some are taller than others and the gaps look inconsistent. Here's my CSS:\n\n.product-grid {\n  display: flex;\n  flex-wrap: wrap;\n}\n\n.product-card {\n  width: 33%;\n  margin: 10px;\n}\n\nCan you help me fix this? I want equal height cards with consistent gaps that work on mobile too.",
+      "expected_output": "Should diagnose the flexbox issue, recommend using gap property and CSS Grid for equal heights, provide responsive solution",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "navbar-spacing-issues",
+      "prompt": "My navbar links have weird spacing - the gap between them is not consistent and on mobile they overflow. I'm using Tailwind. Here's the code:\n\n<nav className=\"flex p-4\">\n  <a href=\"/\">Home</a>\n  <a href=\"/about\">About</a>\n  <a href=\"/contact\">Contact</a>\n  <a href=\"/blog\">Blog</a>\n</nav>\n\nHow do I fix the spacing and make it mobile responsive?",
+      "expected_output": "Should identify missing gap/spacing utilities in Tailwind, provide responsive classes, suggest mobile menu or wrapping solution",
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "centering-nightmare",
+      "prompt": "I've been trying to center a div both horizontally and vertically for 30 minutes and nothing works. The parent is full viewport height. Here's what I have:\n\n.parent {\n  height: 100vh;\n  width: 100%;\n}\n\n.child {\n  margin: auto;\n  width: 300px;\n  height: 200px;\n}\n\nWhy isn't this centering? I need it to work on all screen sizes.",
+      "expected_output": "Should explain why margin:auto doesn't vertically center, provide flexbox or grid solution, ensure responsive behavior",
+      "files": []
+    }
+  ]
+}

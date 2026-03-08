@@ -1,0 +1,31 @@
+{
+  "eval_id": 2,
+  "eval_name": "navbar-spacing-issues",
+  "prompt": "My navbar links have weird spacing - the gap between them is not consistent and on mobile they overflow. I'm using Tailwind. Here's the code:\n\n<nav className=\"flex p-4\">\n  <a href=\"/\">Home</a>\n  <a href=\"/about\">About</a>\n  <a href=\"/contact\">Contact</a>\n  <a href=\"/blog\">Blog</a>\n</nav>\n\nHow do I fix the spacing and make it mobile responsive?",
+  "assertions": [
+    {
+      "name": "identifies_missing_gap",
+      "description": "Identifies that the flex container is missing gap/spacing utilities",
+      "type": "contains_any",
+      "expected": ["gap", "spacing", "space-", "no gap", "missing"]
+    },
+    {
+      "name": "provides_tailwind_fix",
+      "description": "Provides Tailwind-specific classes as the solution",
+      "type": "contains_any",
+      "expected": ["gap-", "className", "space-x", "flex-wrap"]
+    },
+    {
+      "name": "addresses_mobile_overflow",
+      "description": "Addresses the mobile overflow issue",
+      "type": "contains_any",
+      "expected": ["overflow", "flex-wrap", "flex-col", "mobile", "wrap", "sm:", "md:"]
+    },
+    {
+      "name": "mentions_touch_targets",
+      "description": "Mentions accessibility/touch target considerations",
+      "type": "contains_any",
+      "expected": ["touch", "tap", "target", "padding", "px-", "py-", "accessibility"]
+    }
+  ]
+}

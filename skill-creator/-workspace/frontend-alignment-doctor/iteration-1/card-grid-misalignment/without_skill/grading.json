@@ -1,0 +1,8 @@
+{
+  "expectations": [
+    {"text": "identifies_width_margin_math_error", "passed": true, "evidence": "width: 33% + margin: 10px creates width calculation problems. 33% + 10px (left) + 10px (right) = 33% + 20px per card. 3 cards = 99% + 60px, which exceeds 100%"},
+    {"text": "recommends_css_grid_or_gap", "passed": true, "evidence": "display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;"},
+    {"text": "provides_responsive_solution", "passed": true, "evidence": "Desktop (>840px): 3 columns, Tablet (560-840px): 2 columns, Mobile (<560px): 1 column, No media queries needed!"},
+    {"text": "explains_unequal_heights", "passed": true, "evidence": "Flexbox with flex-wrap: wrap does not make children equal height by default, Grid children in the same row are equal height by default"}
+  ]
+}

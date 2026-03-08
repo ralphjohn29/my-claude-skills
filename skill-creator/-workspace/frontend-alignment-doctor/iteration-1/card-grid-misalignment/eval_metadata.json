@@ -1,0 +1,31 @@
+{
+  "eval_id": 1,
+  "eval_name": "card-grid-misalignment",
+  "prompt": "The cards in my product grid are not aligning properly - some are taller than others and the gaps look inconsistent. Here's my CSS:\n\n.product-grid {\n  display: flex;\n  flex-wrap: wrap;\n}\n\n.product-card {\n  width: 33%;\n  margin: 10px;\n}\n\nCan you help me fix this? I want equal height cards with consistent gaps that work on mobile too.",
+  "assertions": [
+    {
+      "name": "identifies_width_margin_math_error",
+      "description": "Correctly identifies that width: 33% + margin: 10px causes math issues exceeding 100%",
+      "type": "contains",
+      "expected": true
+    },
+    {
+      "name": "recommends_css_grid_or_gap",
+      "description": "Recommends using CSS Grid or the gap property as the solution",
+      "type": "contains_any",
+      "expected": ["grid-template-columns", "display: grid", "gap:"]
+    },
+    {
+      "name": "provides_responsive_solution",
+      "description": "Includes responsive considerations for mobile/tablet/desktop",
+      "type": "contains_any",
+      "expected": ["mobile", "tablet", "responsive", "@media", "auto-fit", "minmax"]
+    },
+    {
+      "name": "explains_unequal_heights",
+      "description": "Explains why cards have unequal heights",
+      "type": "contains_any",
+      "expected": ["height", "stretch", "equal", "row"]
+    }
+  ]
+}
