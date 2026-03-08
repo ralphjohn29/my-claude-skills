@@ -1,0 +1,72 @@
+{
+  "skill_name": "frontend-alignment-doctor",
+  "evals": [
+    {
+      "id": 1,
+      "name": "button-icon-broad-selector",
+      "prompt": "The Upload Files button on /admin/media has an icon that's not properly aligned. The icon appears too high and offset. The button is inside a .media-empty container.",
+      "expected_output": "The AI should search for broad selectors like '.media-empty svg' and find the culprit CSS rule, then suggest a minimal fix (changing to direct child selector or removing the margin). Should NOT add comprehensive button SVG styling.",
+      "files": [],
+      "assertions": [
+        {
+          "name": "searches-for-broad-selectors-first",
+          "description": "Should grep/search for broad selectors before reading CSS files",
+          "check": "The AI should use grep/grep tool to search for patterns like '.media-empty svg' or 'container svg' BEFORE reading full CSS files"
+        },
+        {
+          "name": "finds-correct-root-cause",
+          "description": "Identifies .media-empty svg or similar broad selector as the cause",
+          "check": "The identified root cause should mention a broad descendant selector affecting SVG elements"
+        },
+        {
+          "name": "minimal-fix-only",
+          "description": "Fix should be minimal - single CSS rule change, not comprehensive styling",
+          "check": "The fix should modify or remove one specific CSS rule, not add multiple new rules like .btn svg, .btn-lg svg, etc."
+        },
+        {
+          "name": "no-over-engineering",
+          "description": "Should NOT add comprehensive button icon alignment CSS",
+          "check": "Should NOT suggest adding .btn svg with width, height, vertical-align, etc. as a 'fix'"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "nested-image-alignment",
+      "prompt": "The product image inside my card component's 'View Details' button has weird border-radius. The button is inside a .product-card container.",
+      "expected_output": "Should search for '.product-card img' or similar broad selector and identify it as affecting images inside nested buttons.",
+      "files": [],
+      "assertions": [
+        {
+          "name": "identifies-broad-img-selector",
+          "description": "Should find broad img selector like .product-card img",
+          "check": "Root cause should mention .product-card img or similar descendant selector"
+        },
+        {
+          "name": "suggests-direct-child-fix",
+          "description": "Should suggest using > direct child selector",
+          "check": "Fix should involve changing to .product-card > img or similar"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "flex-alignment-real-issue",
+      "prompt": "The items in my .nav-links container are not centered vertically. They're stretching to fill the height.",
+      "expected_output": "Should check flex properties on .nav-links and identify missing align-items: center or default stretch behavior.",
+      "files": [],
+      "assertions": [
+        {
+          "name": "checks-flex-properties",
+          "description": "Should check display: flex and align-items on the container",
+          "check": "Should identify flex container and align-items as the issue"
+        },
+        {
+          "name": "minimal-flex-fix",
+          "description": "Fix should be adding or changing align-items property",
+          "check": "Fix should be a single line: align-items: center or similar"
+        }
+      ]
+    }
+  ]
+}
